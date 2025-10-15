@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programme Perte de Poids 30 Jours</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+        
+        .hero .subtitle {
+            font-size: 1.5em;
+            margin-bottom: 30px;
+            opacity: 0.95;
+        }
+        
+        .hero .results {
+            background: rgba(255,255,255,0.2);
+            padding: 20px;
+            border-radius: 10px;
+            display: inline-block;
+            margin: 20px 0;
+        }
+        
+        .hero .results h2 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        
+        .cta-button {
+            background: #ff6b6b;
+            color: white;
+            padding: 20px 50px;
+            font-size: 1.3em;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            margin: 20px 0;
+            font-weight: bold;
+            transition: transform 0.3s, box-shadow 0.3s;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.4);
+        }
+        
+        .price {
+            font-size: 2em;
+            margin: 10px 0;
+            font-weight: bold;
+        }
+        
+        section {
+            padding: 60px 20px;
+        }
+        
+        .section-light {
+            background: #f8f9fa;
+        }
+        
+        .section-white {
+            background: white;
+        }
+        
+        h2 {
+            text-align: center;
+            font-size: 2.5em;
+            margin-bottom: 50px;
+            color: #667eea;
+        }
+        
+        .problem-list {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .problem-item {
+            background: white;
+            padding: 20px;
+            margin: 15px 0;
+            border-left: 5px solid #ff6b6b;
+            border-radius: 5px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        }
+        
+        .solution-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        .solution-card {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        
+        .solution-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .solution-card .icon {
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+        
+        .solution-card h3 {
+            color: #667eea;
+            margin-bottom: 15px;
+            font-size: 1.5em;
+        }
+        
+        .coaches-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .coach-card {
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+        }
+        
+        .coach-card .avatar {
+            width: 120px;
+            height: 120px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 50%;
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3em;
+            color: white;
+        }
+        
+        .coach-card h3 {
+            color: #667eea;
+            font-size: 1.8em;
+            margin-bottom: 10px;
+        }
+        
+        .coach-card .experience {
+            color: #ff6b6b;
+            font-weight: bold;
+            font-size: 1.2em;
+            margin-bottom: 15px;
+        }
+        
+        .stats-section {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-align: center;
+        }
+        
+        .stats-section h2 {
+            color: white;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            max-width: 1000px;
+            margin: 40px auto;
+        }
+        
+        .stat-card {
+            padding: 30px;
+        }
+        
+        .stat-card .number {
+            font-size: 4em;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        
+        .stat-card .label {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+        
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+        
+        .testimonial-card {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+        
+        .testimonial-card .quote {
+            font-style: italic;
+            margin-bottom: 20px;
+            color: #555;
+            line-height: 1.8;
+        }
+        
+        .testimonial-card .author {
+            font-weight: bold;
+            color: #667eea;
+        }
+        
+        .testimonial-card .result {
+            color: #ff6b6b;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+        
+        .guarantee-box {
+            max-width: 800px;
+            margin: 0 auto;
+            background: #fff3cd;
+            border: 3px solid #ffc107;
+            border-radius: 15px;
+            padding: 40px;
+            text-align: center;
+        }
+        
+        .guarantee-box .icon {
+            font-size: 4em;
+            margin-bottom: 20px;
+        }
+        
+        .guarantee-box h3 {
+            color: #667eea;
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+        
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .faq-item {
+            background: white;
+            margin: 15px 0;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        }
+        
+        .faq-question {
+            background: #667eea;
+            color: white;
+            padding: 20px;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 1.1em;
+        }
+        
+        .faq-answer {
+            padding: 20px;
+            display: none;
+            border-top: 2px solid #f0f0f0;
+        }
+        
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+        
+        .final-cta {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-align: center;
+            padding: 80px 20px;
+        }
+        
+        .final-cta h2 {
+            color: white;
+            font-size: 3em;
+            margin-bottom: 30px;
+        }
+        
+        .urgency {
+            background: rgba(255,255,255,0.2);
+            padding: 20px;
+            border-radius: 10px;
+            display: inline-block;
+            margin: 20px 0;
+            font-size: 1.2em;
+        }
+        
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2em;
+            }
+            
+            .hero .subtitle {
+                font-size: 1.2em;
+            }
+            
+            h2 {
+                font-size: 2em;
+            }
+            
+            .cta-button {
+                padding: 15px 30px;
+                font-size: 1.1em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="hero">
+        <div class="container">
+            <div style="max-width: 600px; margin: 0 auto 40px;">
+                <img src="https://i.imgur.com/placeholder.jpg" alt="Challenge Perte de Poids - 4ème Édition" style="width: 100%; border-radius: 15px; box-shadow: 0 10px 40px rgba(0,0,0,0.3);" onerror="this.style.display='none'">
+            </div>
+            <h1>🔥 TRANSFORMEZ VOTRE CORPS EN 30 JOURS</h1>
+            <p class="subtitle">1 Programme = 2 Coachs Diplômés d'État pour vous encadrer</p>
+            
+            <div class="results">
+                <h2>-6 à -8kg en moyenne</h2>
+                <p>Résultats prouvés sur 240+ personnes</p>
+            </div>
+            
+            <br>
+            <a href="https://chat.whatsapp.com/IvMJdy0xsR51B1eYVgmKaP" target="_blank" class="cta-button">JE COMMENCE MA TRANSFORMATION</a>
+            <div style="background: rgba(255,255,255,0.2); padding: 20px; border-radius: 10px; display: inline-block; margin: 20px 0;">
+                <p style="font-size: 1.3em; font-weight: bold; margin-bottom: 10px;">🚀 LANCEMENT DE LA 4ÈME ÉDITION</p>
+                <div class="price">30€ au lieu de 75€</div>
+                <p style="opacity: 0.9;">⚠️ Pour les 100 premiers uniquement !</p>
+            </div>
+        </div>
+    </div>
+
+    <section class="section-light">
+        <div class="container">
+            <h2>❌ Vous en avez marre de...</h2>
+            <div class="problem-list">
+                <div class="problem-item">
+                    <strong>❌ Perdre du poids seul(e)</strong> sans savoir si vous faites bien les choses
+                </div>
+                <div class="problem-item">
+                    <strong>❌ Essayer des régimes compliqués</strong> qui vous laissent affamé(e) et frustré(e)
+                </div>
+                <div class="problem-item">
+                    <strong>❌ Investir dans des programmes</strong> où personne ne répond à vos questions
+                </div>
+                <div class="problem-item">
+                    <strong>❌ Ne pas savoir quoi manger</strong> ni comment organiser vos courses
+                </div>
+                <div class="problem-item">
+                    <strong>❌ Abandonner au bout de quelques jours</strong> par manque de motivation et de soutien
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-white">
+        <div class="container">
+            <h2>✅ La Solution : Un Programme CLÉ EN MAIN</h2>
+            <div class="solution-grid">
+                <div class="solution-card">
+                    <div class="icon">📋</div>
+                    <h3>Programme Complet 30 Jours</h3>
+                    <p>Chaque repas planifié. Vous savez exactement quoi manger, quand et en quelle quantité.</p>
+                </div>
+                <div class="solution-card">
+                    <div class="icon">🛒</div>
+                    <h3>Listes de Courses Prêtes</h3>
+                    <p>Téléchargez, imprimez, achetez. Aucune prise de tête, tout est déjà préparé pour vous.</p>
+                </div>
+                <div class="solution-card">
+                    <div class="icon">👨‍🏫</div>
+                    <h3>2 Coachs Disponibles</h3>
+                    <p>Guillaume et Lilian répondent à TOUTES vos questions dans le groupe privé pendant 30 jours.</p>
+                </div>
+                <div class="solution-card">
+                    <div class="icon">💪</div>
+                    <h3>Groupe Privé Motivant</h3>
+                    <p>Rejoignez une communauté de personnes qui vivent la même transformation que vous.</p>
+                </div>
+                <div class="solution-card">
+                    <div class="icon">📊</div>
+                    <h3>Méthode Prouvée</h3>
+                    <p>240+ personnes ont déjà perdu entre 6 et 8kg avec notre méthode et le programme qu'on propose.</p>
+                </div>
+                <div class="solution-card">
+                    <div class="icon">🎯</div>
+                    <h3>Résultats Garantis</h3>
+                    <p>Suivez le programme, posez vos questions, et les résultats seront au rendez-vous.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-light">
+        <div class="container">
+            <h2>🏆 VOS COACHS DIPLÔMÉS D'ÉTAT</h2>
+            <div class="coaches-grid">
+                <div class="coach-card">
+                    <div style="width: 200px; height: 200px;mg.cc/9FBPzhwS/Capture-d-e-cran-2025-10-15-a-22-55-07. margin: 0 auto 20px; border-radius: 15px; overflow: hidden; box-shadow: 0 5px 20px rgba(0,0,0,0.2);">
+                        <img src="Guillaume.png" alt="Guillaume Legrand" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <h3>Guillaume Legrand</h3>
+                    <div class="experience">15 ans d'expérience</div>
+                    <p><strong>Coach diplômé d'État</strong></p>
+                    <p><strong>Formateur professionnel</strong></p>
+                    <p><strong>Jury certifié</strong></p>
+                    <p style="margin-top: 15px;">Guillaume ne forme pas que des clients, il forme aussi de nouveaux coachs. Son expertise est reconnue dans toute la profession.</p>
+                </div>
+                <div class="coach-card">
+                    <div style="width: 200px; height: 200px; margin: 0 auto 20px; border-radius: 15px; overflow: hidden; box-shadow: 0 5px 20px rgba(0,0,0,0.2);">
+                        <img src="Lilian.PNG" alt="Lilian" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <h3>Lilian</h3>
+                    <div class="experience">4 ans d'expertise</div>
+                    <p><strong>Coach diplômé d'État</strong></p>
+                    <p><strong>Spécialiste transformation physique</strong></p>
+                    <p><strong>Expert en nutrition</strong></p>
+                    <p style="margin-top: 15px;">Lilian accompagne quotidiennement ses clients vers leurs objectifs avec une approche personnalisée et bienveillante.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="stats-section">
+        <div class="container">
+            <h2>📊 LES CHIFFRES PARLENT D'EUX-MÊMES</h2>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="number">240+</div>
+                    <div class="label">Personnes accompagnées avec succès</div>
+                </div>
+                <div class="stat-card">
+                    <div class="number">6-8kg</div>
+                    <div class="label">Perte moyenne en 30 jours</div>
+                </div>
+                <div class="stat-card">
+                    <div class="number">19 ans</div>
+                    <div class="label">D'expérience cumulée de vos coachs</div>
+                </div>
+                <div class="stat-card">
+                    <div class="number">30j</div>
+                    <div class="label">De suivi quotidien inclus</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-white">
+        <div class="container">
+            <h2>💬 ILS ONT RÉUSSI, POURQUOI PAS VOUS ?</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="quote">"Je ne pensais pas que c'était possible de perdre autant en si peu de temps sans me sentir frustrée. Les coachs répondent vraiment à toutes les questions, même les plus bêtes !"</div>
+                    <div class="author">- Sophie, 34 ans</div>
+                    <div class="result">✅ -7,5kg en 30 jours</div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="quote">"Le fait d'avoir les listes de courses toutes prêtes a changé ma vie. Plus besoin de réfléchir, je suis juste le programme et ça marche."</div>
+                    <div class="author">- Marc, 41 ans</div>
+                    <div class="result">✅ -8,2kg en 30 jours</div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="quote">"Le groupe WhatsApp c'est ma motivation quotidienne. Voir les progrès des autres et pouvoir poser mes questions directement aux coachs, c'est juste parfait."</div>
+                    <div class="author">- Amina, 28 ans</div>
+                    <div class="result">✅ -6,3kg en 30 jours</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-light">
+        <div class="container">
+            <h2>🎁 CE QUE VOUS RECEVEZ AUJOURD'HUI</h2>
+            <div class="solution-grid">
+                <div class="solution-card">
+                    <h3>👨‍🏫 Suivi par 2 Coachs Diplômés</h3>
+                    <p>Réponses à vos questions pendant 30 jours</p>
+                    <p style="color: #999; text-decoration: line-through; margin-top: 10px;">400€</p>
+                    <p style="color: #ff6b6b; font-weight: bold; font-size: 1.2em;">INCLUS</p>
+                </div>
+                <div class="solution-card">
+                    <h3>📋 Programme Alimentaire Complet</h3>
+                    <p>30 jours de repas planifiés + listes de courses</p>
+                    <p style="color: #999; text-decoration: line-through; margin-top: 10px;">120€</p>
+                    <p style="color: #ff6b6b; font-weight: bold; font-size: 1.2em;">INCLUS</p>
+                </div>
+                <div class="solution-card">
+                    <h3>📱 Accès Groupe WhatsApp Privé</h3>
+                    <p>30 jours avec vos coachs et la communauté</p>
+                    <p style="color: #999; text-decoration: line-through; margin-top: 10px;">120€</p>
+                    <p style="color: #ff6b6b; font-weight: bold; font-size: 1.2em;">INCLUS</p>
+                </div>
+                <div class="solution-card">
+                    <h3>💪 Programme Sportif</h3>
+                    <p>Exercices adaptés pour maximiser vos résultats</p>
+                    <p style="color: #999; text-decoration: line-through; margin-top: 10px;">60€</p>
+                    <p style="color: #ff6b6b; font-weight: bold; font-size: 1.2em;">INCLUS</p>
+                </div>
+            </div>
+            <div style="text-align: center; margin-top: 50px;">
+                <h3 style="font-size: 2em; color: #333;">Valeur totale : <span style="text-decoration: line-through; color: #999;">700€</span></h3>
+                <h3 style="font-size: 2em; color: #666; margin-top: 15px;">Prix normal : <span style="text-decoration: line-through;">75€</span></h3>
+                <div style="background: #ff6b6b; color: white; padding: 15px 40px; border-radius: 10px; display: inline-block; margin-top: 20px; font-size: 1.4em; font-weight: bold;">
+                    🚀 4ÈME ÉDITION : 100 PREMIÈRES PLACES
+                </div>
+                <h3 style="font-size: 3.5em; color: #ff6b6b; margin-top: 20px; font-weight: bold;">30€</h3>
+                <p style="font-size: 1.3em; margin-top: 10px; color: #ff6b6b; font-weight: bold;">Économisez 45€ !</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-white">
+        <div class="container">
+            <h2>🎯 POURQUOI CETTE OFFRE EXCEPTIONNELLE ?</h2>
+            <div class="guarantee-box">
+                <div class="icon">🚀</div>
+                <h3>Lancement de la 4ème Édition</h3>
+                <p style="font-size: 1.2em; line-height: 1.8;">Après 3 éditions réussies avec plus de 240 personnes accompagnées, nous lançons notre 4ème édition. Pour célébrer ce succès et créer une nouvelle vague de transformations, <strong>les 100 premiers bénéficient d'un tarif exceptionnel.</strong></p>
+                <p style="margin-top: 20px; font-weight: bold; color: #ff6b6b; font-size: 1.3em;">30€ au lieu de 75€</p>
+                <p style="margin-top: 15px; font-size: 1.1em;">Une fois les 100 places écoulées, le prix repassera à son tarif normal de 75€.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-light">
+        <div class="container">
+            <h2>❓ QUESTIONS FRÉQUENTES</h2>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question">▶ Combien de temps ai-je accès au groupe WhatsApp ?</div>
+                    <div class="faq-answer">Vous avez accès pendant 30 jours complets à partir de votre inscription. Guillaume et Lilian sont présents quotidiennement pour répondre à toutes vos questions.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">▶ Est-ce que je dois acheter des compléments alimentaires ?</div>
+                    <div class="faq-answer">Non ! Le programme est basé sur une alimentation naturelle et équilibrée. Tout ce dont vous avez besoin se trouve en supermarché. Pas de poudres miracles, pas de pilules.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">▶ Je ne sais pas cuisiner, est-ce compliqué ?</div>
+                    <div class="faq-answer">Absolument pas. Les recettes sont simples et rapides. Si vous savez faire cuire des pâtes et une poêle, vous savez tout faire. Et si vous avez un doute, les coachs sont là !</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">▶ Ça coûte cher en courses ?</div>
+                    <div class="faq-answer">Non, le programme est conçu avec des aliments accessibles qu'on trouve partout. Beaucoup de nos clients dépensent même MOINS qu'avant car ils ne gaspillent plus et achètent uniquement ce dont ils ont besoin.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">▶ Je travaille beaucoup, j'ai le temps ?</div>
+                    <div class="faq-answer">Oui ! C'est justement pour les personnes actives que ce programme est parfait. Les repas sont rapides à préparer (15-20 min max), les courses sont organisées, vous n'avez qu'à suivre.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">▶ Et après les 30 jours ?</div>
+                    <div class="faq-answer">Vous aurez appris à manger sainement et vous pourrez continuer avec les bonnes habitudes acquises. Beaucoup de nos clients continuent à perdre du poids après le programme en appliquant ce qu'ils ont appris.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="final-cta" id="offre">
+        <div class="container">
+            <h2>🔥 PRÊT(E) À TRANSFORMER VOTRE CORPS ?</h2>
+            <p style="font-size: 1.3em; margin-bottom: 30px;">Rejoignez les 240+ personnes qui ont déjà réussi avec ce programme</p>
+            
+            <div class="urgency">
+                🚀 4ÈME ÉDITION : Plus que 100 places à 30€ au lieu de 75€
+            </div>
+            
+            <br><br>
+            <a href="https://chat.whatsapp.com/IvMJdy0xsR51B1eYVgmKaP" target="_blank" class="cta-button">JE REJOINS LE PROGRAMME MAINTENANT</a>
+            
+            <div class="price">30€ au lieu de 75€</div>
+            <p style="font-size: 1.1em; opacity: 0.9;">Paiement sécurisé • Accès immédiat • 100 premières places uniquement</p>
+            
+            <div style="margin-top: 40px; font-size: 1.1em;">
+                <p>✅ 2 coachs diplômés d'État à vos côtés</p>
+                <p>✅ Programme complet + listes de courses</p>
+                <p>✅ Groupe privé WhatsApp 30 jours</p>
+                <p>✅ 4ème édition : 30€ au lieu de 75€</p>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        const faqItems = document.querySelectorAll('.faq-item');
+        faqItems.forEach(item => {
+            const question = item.querySelector('.faq-question');
+            question.addEventListener('click', () => {
+                item.classList.toggle('active');
+            });
+        });
+
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
